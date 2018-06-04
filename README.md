@@ -4,15 +4,17 @@ Test API in Tornado - David Dennis
 Language: python
 
 Notes:
-	Since a uwsgi/nginx configuration was not allowed,
-this uses Tornado for its non-blocking I/O, giving 
-the API greater flexibility and speed while handling requests.
 
-	A db index on the `device_uuid` and `sensor_reading_time` fields speeds
+Since a uwsgi/nginx configuration was not allowed,
+this uses Tornado for its non-blocking I/O, giving 
+the API flexibility and speed while handling requests.
+
+A db index on the `device_uuid` and `sensor_reading_time` fields speeds
 up request lookups. Would likely be more performant to use a NoSQL database and cacheing layer (e.g., Redis) in practice.
 
 Testing:
-	A very basic test suite is provided: "python run_test.py APITest.test_lookup"
+
+A very basic test suite is provided: "python run_test.py APITest.test_lookup"
 
 Requirements:
  - postgres
