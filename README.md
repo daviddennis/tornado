@@ -10,7 +10,9 @@ this uses Tornado for its non-blocking I/O, giving
 the API flexibility and speed while handling requests.
 
 A db index on the `device_uuid` and `sensor_reading_time` fields speeds
-up request lookups. Would likely be more performant to use a NoSQL database and cacheing layer (e.g., Redis) in practice.
+up request lookups. In production, would likely be more performant
+to use a NoSQL database plus many procs running on multiple
+servers behind load balancers in practice.
 
 Testing:
 
@@ -20,7 +22,7 @@ Requirements:
  - Postgres
 
 To run:
-1. activate a virtualenv
+1. Activate a virtualenv
 2. "pip install -r requirements.txt"
 3. "psql -U cognical canary < setup.sql"
 4. "python app.py"
