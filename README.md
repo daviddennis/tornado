@@ -1,10 +1,9 @@
 Test API in Tornado - David Dennis
 ==================================
 
-Notes:
-
 Language: python
 
+Notes:
 Since a uwsgi/nginx configuration was not allowed,
 this uses Tornado for its non-blocking I/O, giving 
 the API greater flexibility and speed while handling requests.
@@ -17,7 +16,6 @@ Requirements:
  - postgres
 
 To run:
-
 1. activate a virtualenv
 2. "pip install -r requirements.txt"
 3. "psql -U cognical canary < setup.sql"
