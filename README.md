@@ -17,7 +17,7 @@ Testing:
 A very basic test suite is provided: "python run_test.py APITest.test_lookup"
 
 Requirements:
- - postgres
+ - Postgres
 
 To run:
 1. activate a virtualenv
