@@ -27,4 +27,4 @@ To run:
 3. "psql -U cognical canary < setup.sql"
 4. "python app.py"
 5. Navigate to http://localhost:8888/device/preload/ (optional)
-5. Make GET/POST requests to http://localhost:8888/device/
+5. Make GET/POST requests to http://localhost:8888/device/ (e.g. Postman)
