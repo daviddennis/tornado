@@ -9,8 +9,7 @@ this uses Tornado for its non-blocking I/O, giving
 the API greater flexibility and speed while handling requests.
 
 A db index on the `device_uuid` and `sensor_reading_time` fields speeds
-up request lookups. It may be more performant to use a NoSQL database and
-cacheing layer (e.g., Redis) in practice.
+up request lookups. This would likely be more performant to use a NoSQL database and cacheing layer (e.g., Redis) in practice.
 
 Requirements:
  - postgres
