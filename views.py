@@ -2,6 +2,7 @@ import json
 from datetime import date
 from copy import copy
 from decimal import Decimal
+from json.decoder import JSONDecodeError
 
 from tornado import gen
 from tornado import web
@@ -92,7 +93,7 @@ class DeviceHandler(BaseHandler):
             if val:
                 data[field_name] = val
             else:
-                print(field_name, val)
+                # log error
                 raise HTTPError(reason='Field "%s" is null' % field_name,
                                 status_code=422)
         return data
